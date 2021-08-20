@@ -1,0 +1,65 @@
+.row {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  padding-top: 4%;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+  font-size: 255%;
+  letter-spacing: 0.2rem;
+  margin-bottom: auto;
+  font-weight: 600;
+}
+
+.top {
+  font-family: 'Karla', sans-serif;
+  font-size: 80%;
+  line-height: 190%;
+  color: gray;
+  width: 570px;
+  margin-top: 15px;
+}
+
+.row2 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.column-eight {
+  flex-basis: calc(100% / 8);
+  padding: 1px;
+  margin: auto;
+}
+
+.column-three {
+  flex-basis: 38%;
+  padding: 1px;
+}
+
+h3 {
+  font-family: 'Karla', sans-serif;
+  font-size: 100%;
+  letter-spacing: 0.1rem;
+  margin-bottom: auto;
+  font-weight: 600;
+  text-align: left;
+}
+
+.caption {
+  font-family: 'Karla', sans-serif;
+  font-size: 80%;
+  text-align: left;
+  line-height: 190%;
+  color: gray;
+  width: 270px;
+  letter-spacing: 0.005rem;
+}
+
+img {
+  width: 46%;
+}
