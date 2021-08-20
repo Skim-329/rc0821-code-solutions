@@ -1,0 +1,70 @@
+.container {
+  background-color: dodgerblue;
+  min-height: 100vh;
+}
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: dodgerblue;
+}
+
+h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 125%;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  font-family: Helvetica, sans-serif;
+  font-size: 86%;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+.paragraph {
+  font-family: Helvetica, sans-serif;
+  font-size: 55%;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  line-height: 150%;
+  width: 155px;
+  margin: auto;
+}
+
+.row1 {
+  display: flex;
+  padding-top: 35px;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.row2 {
+  display: flex;
+}
+
+.column-one-third {
+  width: calc(100% / 3);
+  margin: auto;
+}
+
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 77px;
+  width: 77px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+img {
+  width: 55%;
+}
