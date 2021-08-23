@@ -1,0 +1,263 @@
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  src: url('avenir.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+li,
+a,
+button {
+  font-family: "Avenir", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: rgb(148, 159, 170);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  padding-bottom: 45px;
+}
+
+.logo {
+  width: 12%;
+  margin-right: auto;
+}
+
+.navlinks {
+  list-style: none;
+}
+
+.navlinks li {
+  display: inline-block;
+  padding: 0 18px;
+}
+
+.navlinks li a:hover {
+  color: rgb(58, 83, 83);
+}
+
+.contact > button {
+  padding: 9px 12px;
+  background-color: #294464;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  margin-left: 3px;
+}
+
+.main {
+  position: relative;
+  padding-top: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero {
+  filter: brightness(70%);
+  opacity: 0.9;
+  margin-top: -60px;
+  margin-bottom: -30px;
+}
+
+.toptext {
+  position: absolute;
+  top: 14%;
+  left: 15%;
+  background-color: transparent;
+  color: white;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 400;
+  font-size: 155%;
+}
+
+.bottomtext {
+  position: absolute;
+  left: 15%;
+  bottom: 32%;
+  background-color: transparent;
+  color: white;
+  font-size: x-small;
+  width: 34%;
+  font-family: "Avenir", sans-serif;
+  line-height: 1.77;
+}
+
+.getstarted {
+  padding: 11.5px 28px;
+  background-color: #294464;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  margin-left: 3px;
+  position: absolute;
+  left: 14.5%;
+  bottom: 16%;
+}
+
+.row1 {
+  display: flex;
+  padding-top: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clinicians {
+  font-family: 'Tiempos Headline', serif;
+  color: rgb(108, 116, 116);
+  text-align: center;
+  padding-bottom: 12px;
+  font-weight: lighter;
+}
+
+.sentence {
+  font-family: "Avenir", sans-serif;
+  color: rgb(108, 116, 116);
+  text-align: center;
+  line-height: 1.65;
+  width: 62%;
+  margin: auto;
+  font-size: smaller;
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 55px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.column-half {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.c1 {
+  font-family: "Avenir", sans-serif;
+  font-size: 95%;
+  color: rgb(108, 116, 116);
+  line-height: 2.3;
+}
+
+.row3 {
+  display: flex;
+  align-items: center;
+  padding-top: 65px;
+  padding-bottom: 25px;
+  margin-left: 95px;
+  margin-right: 95px;
+  text-align: left;
+}
+
+.column-left {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.column-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.getstarted2 {
+  padding: 11.5px 28px;
+  background-color: #294464;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.ready {
+  font-family: 'Tiempos Headline', serif;
+  color: rgb(108, 116, 116);
+  padding-bottom: 12px;
+  font-weight: lighter;
+}
+
+.schedule {
+  font-family: "Avenir", sans-serif;
+  color: rgb(108, 116, 116);
+  font-size: smaller;
+}
+
+.row4 {
+  background-color: rgb(73, 75, 75);
+  width: auto;
+  height: 300px;
+  border: 0 solid;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-third {
+  background-color: rgb(73, 75, 75);
+  width: 33%;
+  padding-left: 35px;
+}
+
+.logo2 {
+  background-color: rgb(73, 75, 75);
+  width: 35%;
+  padding-bottom: 15px;
+}
+
+.address {
+  background-color: rgb(73, 75, 75);
+  color: white;
+  font-family: "Avenir", sans-serif;
+  font-size: smaller;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+.column-two-thirds {
+  width: 67%;
+  background-color: rgb(73, 75, 75);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.first {
+  background-color: rgb(73, 75, 75);
+  color: white;
+  font-family: "Avenir", sans-serif;
+  font-size: smaller;
+  line-height: 2;
+}
+
+.second {
+  background-color: rgb(73, 75, 75);
+  color: white;
+  font-family: "Avenir", sans-serif;
+  font-size: smaller;
+  line-height: 2;
+}
