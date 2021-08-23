@@ -6,7 +6,7 @@ console.log('value of area:', area);
 console.log('typeof area:', typeof area);
 
 var bill = 500;
-var payment = 600;
+var payment = 550;
 var change = (payment - bill);
 
 console.log('value of change:', change);
@@ -27,7 +27,7 @@ var fullName = firstName + ' ' + lastName;
 console.log('value of fullName:', fullName);
 console.log('typeof fullName:', typeof fullName);
 
-var pH = 7;
+var pH = 6;
 var isAcidic = pH < 7;
 
 console.log('value of isAcidic:', isAcidic);
