@@ -1,0 +1,28 @@
+.container {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  height: 185px;
+  width: 185px;
+  border-radius: 50%;
+  background-color: rgb(59, 57, 57);
+  display: flex;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.container.bright {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot.on {
+  background-color: yellow;
+}
