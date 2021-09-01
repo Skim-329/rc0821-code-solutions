@@ -7,8 +7,8 @@ function handleSubmit(event) {
     email: contactform.elements.email.value,
     message: contactform.elements.message.value
   };
-  console.log(formresults);
-  document.querySelector('#contact-form').reset();
+  console.log('results:', formresults);
+  contactform.reset();
 }
 
 contactform.addEventListener('submit', handleSubmit);

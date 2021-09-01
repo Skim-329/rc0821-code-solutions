@@ -9,15 +9,20 @@ function handleBlur(event) {
 }
 
 function handleInput(event) {
-  console.log('value of name:', event.target.value);
+  console.log('value of', event.target.name + ':', event.target.value);
 }
 
-var input = document.querySelector('input');
+var username = document.querySelector('#user-name');
+var email = document.querySelector('#user-email');
 var textarea = document.querySelector('textarea');
 
-input.addEventListener('focus', handleFocus);
-input.addEventListener('blur', handleBlur);
-input.addEventListener('input', handleInput);
+username.addEventListener('focus', handleFocus);
+username.addEventListener('blur', handleBlur);
+username.addEventListener('input', handleInput);
+
+email.addEventListener('focus', handleFocus);
+email.addEventListener('blur', handleBlur);
+email.addEventListener('input', handleInput);
 
 textarea.addEventListener('focus', handleFocus);
 textarea.addEventListener('blur', handleBlur);
