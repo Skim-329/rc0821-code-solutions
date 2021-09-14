@@ -1,13 +1,13 @@
 /* exported swapChars */
 function swapChars(firstIndex, secondIndex, string) {
   var newString = '';
-  for (var i = 0; i < string.length; i++) {
-    if (i === firstIndex) {
+  for (var x = 0; x < string.length; x++) {
+    if (x === firstIndex) {
       newString += string[secondIndex];
-    } else if (i === secondIndex) {
+    } else if (x === secondIndex) {
       newString += string[firstIndex];
     } else {
-      newString += string[i];
+      newString += string[x];
     }
   }
   return newString;
