@@ -1,8 +1,6 @@
-var timerID = setInterval(countDown, 1000);
-
 function countDown() {
   var count = document.querySelector('h1');
-
+  count.textContent = '3';
 }
 
-clearInterval(timerID);
+setInterval(countDown, 1000);
