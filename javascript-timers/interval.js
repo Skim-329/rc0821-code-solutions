@@ -1,6 +1,17 @@
+var startCount = setInterval(countDown, 1000);
+
+var start = document.querySelector('h1');
+var count = 4;
+
 function countDown() {
-  var count = document.querySelector('h1');
-  count.textContent = '3';
+  count--;
+  start.textContent = count;
+  if (count === 0) {
+    start.textContent = '~Earth Beeeelooowww Us~';
+    stopFunction();
+  }
 }
 
-setInterval(countDown, 1000);
+function stopFunction() {
+  clearInterval(startCount);
+}
