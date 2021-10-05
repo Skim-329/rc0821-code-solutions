@@ -1,0 +1,401 @@
+    1  exit
+    2  whoami
+    3  git config --global user.name "Simon Kim"
+    4  git config --global user.email "mrsimonkim@gmail.com"
+    5  git config --global --list
+    6  exit
+    7  cd ~/repos/rc0821-code-solutions
+    8  git status
+    9  git switch javascript-bank
+   10  git status
+   11  git add javascript-bank
+   12  git status
+   13  git commit -m "javascript-bank - Simon Kim."
+   14  git push origin javascript-bank
+   15  git switch master
+   16  git status
+   17  git pull origin master
+   18  git status
+   19  git switch javascript-timers
+   20  git status
+   21  git add javascript-timers
+   22  git status
+   23  git commit -m "javascript-timers - Simon Kim."
+   24  git push origin javascript-timers
+   25  git switch master
+   26  git status
+   27  git pull origin master
+   28  git branch javascript-carousel
+   29  git branch --list
+   30  git switch javascript-carousel
+   31  git status
+   32  git add javascript-carousel
+   33  git status
+   34  git add javascript-carousel
+   35  git status
+   36  git commit -m "javascript-carousel - in progress.v1."
+   37  git switch master
+   38  exit
+   39  cd ~/repos/rc0821-code-solutions
+   40  git pull origin master
+   41  git status
+   42  git branch http-messages
+   43  git branch --list
+   44  git switch http-messages
+   45  git status
+   46  pwd
+   47  cd repos/rc0821-code-solutions/http-messages
+   48  cd ~/repos/rc0821-code-solutions/http-messages
+   49  http http://www.example.com
+   50  http --verbose http:www.example.com
+   51  http --verbose http://www.example.com
+   52  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   53  http --body GET https://example.com > index.html
+   54  git status
+   55  git add http-messages
+   56  git add ./
+   57  git status
+   58  git commit -m "http-messages - Simon Kim."
+   59  git push origin http-messages
+   60  git switch master
+   61  exit
+   62  cd ~/repos/rc0821-code-solutions
+   63  git status
+   64  git pull origin master
+   65  git branch javascript-ajax
+   66  git branch --list
+   67  git switch javascript-ajax
+   68  git status
+   69  pwd
+   70  git status
+   71  git add javascript-ajax
+   72  git status
+   73  git commit -m "javascript-ajax - Simon Kim."
+   74  git push origin javascript-ajax
+   75  git switch master
+   76  git pull origin master
+   77  git status
+   78  git switch javascript-carousel
+   79  git status
+   80  git add javascript-carousel
+   81  git status
+   82  git commit -m "javascript-carousel - manual functionality complete."
+   83  git commit -m "javascript-carousel - manual functionality complete." --no-verify
+   84  git status
+   85  git switch master
+   86  exit
+   87  pwd
+   88  cd ~/repos/rc0821-code-solutions
+   89  git status
+   90  http https://www.boredapi.com/api
+   91  http --verbose https://www.boredapi.comapi
+   92  http --verbose https://www.boredapie.com/api
+   93  http https://www.boredapi.com/api
+   94  http https://api.spoonacular.com/food/wine/pairing
+   95  http https://api.spoonacular.com/food/wine/pairing/813583d5fed0439d9bc095ff4b5c0ac4
+   96  http https://api.spoonacular.com/food/wine/pairing
+   97  http https://api.spoonacular.com/food/wine/pairing?food=steak?apiKey=813583d5fed0439d9bc095ff4b5c0ac4813583d5fed0439d9bc095ff4b5c0ac4
+   98  http https://api.spoonacular.com/food/wine/pairing?food=steak&apiKey=813583d5fed0439d9bc095ff4b5c0ac4813583d5fed0439d9bc095ff4b5c0ac4
+   99  http https://api.spoonacular.com/food/wine/pairing?food=steak&apiKey=813583d5fed0439d9bc095ff4b5c0ac4
+  100  http https://api.spoonacular.com/food/wine/pairing apiKey==813583d5fed0439d9bc095ff4b5c0ac4 food==steak
+  101  exit
+  102  cd ~/repos
+  103  git clone git@github.com:skim-329/ajax-project.git
+  104  cd ajax-project
+  105  npm ci
+  106  git status
+  107  git pull origin master
+  108  git status
+  109  git branch issue-1-filter-by-food-and-price
+  110  git branch --list
+  111  git switch issue-1-filter-by-food-and-price
+  112  git status
+  113  git add issue-1-filter-by-food-and-price
+  114  git add css/styles.css index.html images/LogoAndText.png images/dropDownBar.png
+  115  git status
+  116  git commit -m "Created nav bar design. #1."
+  117  git switch master
+  118  exit
+  119  cd ~/repos/ajax-project
+  120  git status
+  121  git pull origin master
+  122  git branch --list
+  123  git switch issue-1-filter-by-food-and-price
+  124  git status
+  125  git add css/styles.css index.html images/ActualLogo.svg images/Logo.svg images/RealLogo.svg images/Simon Kim - AJAX Project.html images/Simon Kim - AJAX Project_files/
+  126  git status
+  127  git add css/styles.css index.html
+  128  git status
+  129  git commit -m "Nav bar created. #1."
+  130  git status
+  131  git add css/layout.css css/styles.css images/LogoAndText.png index.html
+  132  git status
+  133  git add images/ActualLogo.svg images/Logo.svg images/Simon Kim - AJAX Project.html images/Simon Kim - AJAX Project_files/
+  134  git status
+  135  git commit -m "main skeleton created. #1"
+  136  git status
+  137  git add css index.html images
+  138  git status
+  139  git commit -m "built 1st page. #1"
+  140  git branch
+  141  git push origin issue-1-filter-by-food-and-price
+  142  git status
+  143  git add css index.html js/main.js
+  144  git status
+  145  git commit -m "made a request to the spoonacular API for recommended wine. #1."
+  146  git push origin issue-1-filter-by-food-and-price
+  147  exit
+  148  cd ~/repos/ajax-project
+  149  git status
+  150  git switch master
+  151  git pull origin master
+  152  git switch issue-1-filter-by-food-and-price
+  153  git status
+  154  git add css/styles.css index.html js/main.js
+  155  git status
+  156  git commit -m "issue-1 and 2 complete."
+  157  git push origin issue-1-filter-by-food-and-price
+  158  git status
+  159  css/styles.css index.html images
+  160  git status
+  161  git add images/mdi_heart-plus-outline.svg
+  162  git status
+  163  git add css/styles.css index.html
+  164  git status
+  165  git commit -m "issue-1-complete."
+  166  git switch master
+  167  exit
+  168  cd ~/repos/ajax-project
+  169  git pull origin master
+  170  exit
+  171  cd ~/repos/rc0821-code-solutions
+  172  git switch object-manipulation-2
+  173  git status
+  174  git add Playground/
+  175  git switch master
+  176  git status
+  177  git commit -m "Playground"
+  178  git status
+  179  git reset
+  180  git status
+  181  git switch object-manipulation-2
+  182  git status
+  183  git add object-manipulation-2
+  184  git status
+  185  git commit -m "object-manipulation-2 - #1 complete."
+  186  git push origin object-manipulation-2
+  187  git switch master
+  188  exit
+  189  cd ~/repos/ajax-project
+  190  git pull origin master
+  191  git branch issue-2-favorites
+  192  git branch --list
+  193  git switch issue-2-favorites
+  194  git status
+  195  git add css/styles.css index.html js images/addtofav.svg
+  196  git status
+  197  git commit -m "reorganized and updated html." 
+  198  git push origin issue-2-favorites
+  199  git status
+  200  git add css/styles.css js/main.js
+  201  git status
+  202  git commit -m "added click target for adding wine to the favorites page from the recommend-wine page."
+  203  git push origin issue-2-favorites
+  204  git status
+  205  git add index.html js/data.js
+  206  git status
+  207  git commit -m "changed view to landing-page on reload."
+  208  git push origin issue-2-favorites
+  209  git status
+  210  git add js/main.js
+  211  git status
+  212  git commit -m "resets form after submission."
+  213  git push origin issue-2-favorites
+  214  git status
+  215  git add index.html js
+  216  git status
+  217  git commit -m "local storage and appending to favorites in progress."
+  218  git push origin issue-2-favorites
+  219  git switch master
+  220  exit
+  221  cd ~/repos/ajax-project
+  222  git status
+  223  git pull origin master
+  224  git switch issue-2-favorites
+  225  git status
+  226  git add index.html js/main.js
+  227  git status
+  228  git commit -m "add to favorites heart only appears if there is a response from the API."
+  229  git push origin issue-2-favorites
+  230  git status
+  231  git commit css/styles.css js
+  232  git status
+  233  git add css/styles.css js
+  234  git status
+  235  git commit -m "cleared previous recommendation without having to refresh."
+  236  git push origin issue-2-favorites
+  237  git status
+  238  git add css index.html js/main.js
+  239  git status
+  240  git commit -m "Added modal to confirm that wine has been added to favorites."
+  241  git push origin issue-2-favorites
+  242  git switch master
+  243  exit
+  244  cd ~/repos/ajax-project
+  245  git switch issue-2-favorites
+  246  git status
+  247  git switch master
+  248  git pull origin master
+  249  git switch issue-2-favorites
+  250  git status
+  251  exit
+  252  cd ~/repos/ajax-project
+  253  git status
+  254  git switch master
+  255  git pull origin master
+  256  git switch issue-2-favorites
+  257  git status
+  258  git add css/styles.css index.html js/main.js
+  259  git status
+  260  git commit -m "Fixed styling to project."
+  261  git push origin issue-2-favorites
+  262  git status
+  263  git add js/main.js
+  264  git status
+  265  git commit -m "Favorite wine is loaded immediately without having to refresh."
+  266  git push origin issue-2-favorites
+  267  git status
+  268  git add index.html js/main.js
+  269  git status
+  270  git commit -m "issue-2-favorites complete."
+  271  git push origin issue-2-favorites
+  272  git switch master
+  273  git pull origin master
+  274  git switch issue-2-favorites
+  275  git status
+  276  exit
+  277  cd ~/repos/ajax-project
+  278  git status
+  279  git add index.html
+  280  git status
+  281  git commit -m "updated metatags"
+  282  git push origin issue-2-favorites
+  283  git status
+  284  git add index.html
+  285  git status
+  286  git commit -m "corrected metatags for proper image display."
+  287  git push origin issue-2-favorites
+  288  git status
+  289  git switch master
+  290  git pull origin master
+  291  git switch issue-2-favorites
+  292  git status
+  293  git push origin issue-2-favorites
+  294  exit
+  295  cd ~/repos/ajax-project
+  296  exit
+  297  cd ~/repos/rc0821-code-solutions
+  298  git status
+  299  git pull origin master
+  300  git status
+  301  git branch es6-const-let
+  302  git branch --list
+  303  git switch es6-const-let
+  304  git status
+  305  git add es6-const-let
+  306  git status
+  307  git commit -m "es6-const-let - Simon Kim."
+  308  git push origin es6-const-let
+  309  git switch master
+  310  git pull origin master
+  311  git status
+  312  git branch es6-template-literals
+  313  git branch --list
+  314  git switch es6-template-literals
+  315  git status
+  316  git add es6-template-literals
+  317  git commit -m "es6-template-literals - Simon Kim."
+  318  git push origin es6-template-literals
+  319  git switch master
+  320  git pull origin master
+  321  git status
+  322  git branch es6-destructuring
+  323  git switch es6-destructuring
+  324  git status
+  325  git add es6-destructuring
+  326  git status
+  327  git commit -m "es6-destructuring - Simon Kim."
+  328  git push origin es6-destructuring
+  329  git switch master
+  330  git pull origin master
+  331  git status
+  332  git branch es6-arrow-functions
+  333  git switch es6-arrow-functions
+  334  git status
+  335  git add es6-arrow-functions
+  336  git commit -m "es6-arrow-function - Simon Kim."
+  337  git push origin es6-arrow-functions
+  338  git switch master
+  339  git pull origin master
+  340  git branch command-line-basics
+  341  git switch command=line-basics
+  342  git branch command-line-basics
+  343  git status
+  344  git switch command-line-basics
+  345  git status
+  346  cd command-line-basics
+  347  pwd
+  348  man man
+  349  man cat
+  350  cat laziness.txt
+  351  cat impatience.txt
+  352  cat hubris.txt
+  353  man cat
+  354  cat laziness.txt impatience.txt hubris.txt
+  355  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  356  cat three-virtues.txt
+  357  man ls
+  358  ls
+  359  man ls
+  360  ls --all
+  361  ls --classify
+  362  ls -aF lfz-staff > lfz-staff/contents.txt
+  363  cat lfz-staff/contents.txt
+  364  man pwd
+  365  pwd
+  366  pwd > i-was-here.txt
+  367  ls
+  368  cat i-was-here.txt
+  369  man echo
+  370  echo 'Hello, World!'
+  371  echo 'Hello, World!' > hello.txt
+  372  ls
+  373  cat hello.txt
+  374  man touch
+  375  touch tag-youre-it.txt
+  376  ls
+  377  touch boop.txt/snoot
+  378  touch snoot/boop.txt
+  379  ls
+  380  ls snoot
+  381  man mkdir
+  382  mkdir parent
+  383  ls
+  384  mkdir -p parent/child/grandchild
+  385  touch parent/child/grandchild/.gitkeep
+  386  ls -a
+  387  man mv
+  388  mv pokiemans pokemon
+  389  ls
+  390  man rm
+  391  rm lol.txt
+  392  ls
+  393  rm -r kill-me/
+  394  ls
+  395  man cp
+  396  cp and-then.txt no-and-then.txt
+  397  ls
+  398  cat and-then.txt no-and-then.txt
+  399  man history
+  400  history
+  401  history > command-history.txt
