@@ -70,7 +70,29 @@ app.post('/api/notes', (req, res) => {
   }
 });
 
+app.delete('/api/notes/:id', (req, res) => {
+  const idAsString = req.params.id;
+  const idAsNumber = Number(idAsString);
+  if (Number.isInteger(idAsNumber) && idAsNumber > 0) {
+    const noteAtId = notes[idAsString];
+    if (noteAtId === undefined) {
+      res.status(404).json(objectNotFoundError);
+    } else {
+      // need to actually delete the note from the notes object
+      res.status(204);
+    }
+  } else {
+    res.status(400).json(notIntegerError);
+  }
+});
+
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Express server listening on port 3000!');
 });
+
+// app.delete('/api/grades/:id', function (req, res) {
+//   const id = req.params.id;
+//   delete grades[id];
+//   res.sendStatus(204);
+// });
