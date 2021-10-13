@@ -66,7 +66,6 @@ app.post('/api/notes', (req, res) => {
         res.status(201).json(newNote);
       }
     });
-
   }
 });
 
@@ -78,11 +77,51 @@ app.delete('/api/notes/:id', (req, res) => {
     if (noteAtId === undefined) {
       res.status(404).json(objectNotFoundError);
     } else {
-      // need to actually delete the note from the notes object
-      res.status(204);
+      delete notes[idAsNumber];
+      const fs = require('fs');
+      const r = JSON.stringify(data);
+
+      fs.writeFile('data.json', r, err => {
+        if (err) {
+          res.status(500).json(serverError);
+          throw err;
+        } else {
+          res.status(204).json();
+        }
+      });
     }
   } else {
     res.status(400).json(notIntegerError);
+  }
+});
+
+app.put('/api/notes/:id', (req, res) => {
+  const newNote = req.body;
+  const idAsString = req.params.id;
+  const idAsNumber = Number(idAsString);
+  if (newNote.content === undefined) {
+    res.status(400).json(requiredFieldError);
+  } else if (!Number.isInteger(idAsNumber) || idAsNumber <= 0) {
+    res.status(400).json(notIntegerError);
+  } else {
+    const noteAtId = notes[idAsString];
+    if (noteAtId === undefined) {
+      res.status(404).json(objectNotFoundError);
+    } else {
+      newNote.id = idAsNumber;
+      notes[idAsString] = newNote;
+      const fs = require('fs');
+      const r = JSON.stringify(data);
+
+      fs.writeFile('data.json', r, err => {
+        if (err) {
+          res.status(500).json(serverError);
+          throw err;
+        } else {
+          res.status(200).json(newNote);
+        }
+      });
+    }
   }
 });
 
@@ -90,9 +129,3 @@ app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Express server listening on port 3000!');
 });
-
-// app.delete('/api/grades/:id', function (req, res) {
-//   const id = req.params.id;
-//   delete grades[id];
-//   res.sendStatus(204);
-// });
