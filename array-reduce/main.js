@@ -17,11 +17,11 @@ const traits = [
   { trainer: 'ash' }
 ];
 
-const sum = (previousValue, currentValue) => previousValue + currentValue;
-console.log(numbers.reduce(sum));
+const sum = numbers.reduce((previousValue, currentValue) => previousValue + currentValue);
+console.log(sum);
 
-const product = (previousValue, currentValue) => previousValue * currentValue;
-console.log(numbers.reduce(product));
+const product = numbers.reduce((previousValue, currentValue) => previousValue * currentValue);
+console.log(product);
 
 const balance =
 (account.filter(account => account.type === 'deposit')
@@ -32,10 +32,5 @@ const balance =
   .reduce((acc, amt) => acc + amt));
 console.log(balance);
 
-const composite =
-(traits.map(traits => traits.color)) +
-  (traits.map(traits => traits.type)) +
-  (traits.map(traits => traits.name)) +
-  (traits.map(traits => traits.level)) +
-  (traits.map(traits => traits.trainer));
+const composite = traits.reduce((previousValue, currentValue) => previousValue + currentValue.type + currentValue.name + currentValue.level + currentValue.trainer);
 console.log(composite);
