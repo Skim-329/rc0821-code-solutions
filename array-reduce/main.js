@@ -23,14 +23,16 @@ console.log(sum);
 const product = numbers.reduce((previousValue, currentValue) => previousValue * currentValue);
 console.log(product);
 
-const balance =
-(account.filter(account => account.type === 'deposit')
-  .map(account => account.amount)
-  .reduce((acc, amt) => acc + amt)) -
-(account.filter(account => account.type === 'withdrawal')
-  .map(account => account.amount)
-  .reduce((acc, amt) => acc + amt));
+const net = (previousValue, currentValue) => {
+  if (currentValue.type === 'deposit') {
+    return previousValue + currentValue.amount;
+  }
+  return previousValue - currentValue.amount;
+};
+const balance = account.reduce(net, 0);
 console.log(balance);
 
-const composite = traits.reduce((previousValue, currentValue) => previousValue + currentValue.type + currentValue.name + currentValue.level + currentValue.trainer);
+const composite = traits.reduce((previousValue, currentValue) => {
+  return Object.assign(previousValue, currentValue);
+}, {});
 console.log(composite);
