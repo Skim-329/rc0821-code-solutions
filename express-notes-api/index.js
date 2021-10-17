@@ -4,6 +4,8 @@ const app = express();
 const data = require('./data');
 const notes = data.notes;
 
+const fs = require('fs');
+
 const requiredFieldError = {
   error: 'content is a required field'
 };
@@ -55,10 +57,9 @@ app.post('/api/notes', (req, res) => {
   } else {
     newNote.id = id;
     notes[id] = newNote;
-    const fs = require('fs');
-    const r = JSON.stringify(data);
+    const returnData = JSON.stringify(data);
 
-    fs.writeFile('data.json', r, err => {
+    fs.writeFile('data.json', returnData, err => {
       if (err) {
         res.status(500).json(serverError);
         throw err;
@@ -78,10 +79,9 @@ app.delete('/api/notes/:id', (req, res) => {
       res.status(404).json(objectNotFoundError);
     } else {
       delete notes[idAsNumber];
-      const fs = require('fs');
-      const r = JSON.stringify(data);
+      const returnData = JSON.stringify(data);
 
-      fs.writeFile('data.json', r, err => {
+      fs.writeFile('data.json', returnData, err => {
         if (err) {
           res.status(500).json(serverError);
           throw err;
@@ -110,10 +110,9 @@ app.put('/api/notes/:id', (req, res) => {
     } else {
       newNote.id = idAsNumber;
       notes[idAsString] = newNote;
-      const fs = require('fs');
-      const r = JSON.stringify(data);
+      const returnData = JSON.stringify(data);
 
-      fs.writeFile('data.json', r, err => {
+      fs.writeFile('data.json', returnData, err => {
         if (err) {
           res.status(500).json(serverError);
           throw err;
