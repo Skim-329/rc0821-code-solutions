@@ -1,0 +1,37 @@
+.btn {
+  border: 2px solid black;
+  padding: 0.65rem 1.25rem;
+  background-color: black;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.btn-darkblue {
+  background-color: #351c75;
+  color: white;
+}
+
+.btn-purple {
+  background-color: #674ea7;
+  color: white;
+}
+
+.btn-salmon {
+  background-color: #e06666;
+  color: white;
+}
+
+.btn-sand {
+  background-color: #f6b26b;
+  color: black;
+}
+
+.btn-yellow {
+  background-color: #ff0;
+  color: black;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+}
