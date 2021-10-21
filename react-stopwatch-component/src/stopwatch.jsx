@@ -15,15 +15,22 @@ class StopWatch extends React.Component {
     }, 1000);
   }
 
+  resetWatch() {
+    return this.setState((state, props) => {
+      return { second: 0 };
+    });
+  }
+
   render() {
     return (
       <div className='container'>
         <div
           className='number'
-          onClick={this.startWatch}>
+          onClick={this.resetWatch}>
           {this.state.second}
         </div>
-        <div className='icon'>
+        <div className='icon'
+          onClick={this.startWatch}>
           <p>hello</p>
         </div>
       </div>
