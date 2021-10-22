@@ -11,13 +11,13 @@ class StopWatch extends React.Component {
   }
 
   handleClick() {
+    this.setState({ watchStart: !this.state.watchStart });
     if (this.state.watchStart) {
       clearInterval(this.state.watch);
     } else {
       const watch = setInterval(() => this.startWatch(), 1000);
       this.setState({ watch });
     }
-    this.setState({ watchStart: !this.state.watchStart });
   }
 
   resetWatch() {
@@ -27,20 +27,24 @@ class StopWatch extends React.Component {
     }
   }
 
-  render() {
+  changeIcon() {
     let icon;
     if (this.state.watchStart) {
       icon = 'fas fa-pause';
     } else {
       icon = 'fas fa-play';
     }
+    return icon;
+  }
+
+  render() {
     return (
       <div className='container'>
         <button className='circle' onClick={() => this.resetWatch()}>
           <span className='number'>{this.state.seconds}</span>
         </button>
-        <button className='icons' onClick={() => this.startWatch()}>
-          <i className={icon}></i>
+        <button className='icons' onClick={() => this.handleClick()}>
+          <i className={this.changeIcon()}></i>
         </button>
       </div>
     );
