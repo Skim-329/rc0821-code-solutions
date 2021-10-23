@@ -1,0 +1,19 @@
+.label {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fa-check {
+  color: green;
+  padding-left: 8px;
+}
+
+.fa-times {
+  color: red;
+  padding-left: 8px;
+}
+
+.info {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-size: smaller;
+}
