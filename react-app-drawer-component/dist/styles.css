@@ -1,0 +1,31 @@
+.hidden {
+  display: hidden;
+}
+
+.background {
+  background-color: white;
+  position: absolute;
+}
+
+.menu {
+  border: 2px solid black;
+  width: 50px;
+  height: 100px;
+  padding-left: 10px;
+  position: absolute;
+  background-color: white;
+}
+
+.menuicon {
+  font-size: small;
+  margin: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
