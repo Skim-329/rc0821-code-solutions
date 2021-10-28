@@ -58,7 +58,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
   db.query(sql, params)
     .then(result => {
       const [user] = result.rows;
-      if (user.length === 0) {
+      if (!user) {
         throw new ClientError(401, 'invalid login');
       } else {
         argon2
@@ -73,7 +73,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
               };
               const token = jwt.sign(newUser, process.env.TOKEN_SECRET);
               newUser.token = token;
-              res.status(200).json(newUser);
+              res.status(200).json({ token: token, user: newUser });
             }
           })
           .catch(err => next(err));
