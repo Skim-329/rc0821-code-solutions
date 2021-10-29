@@ -3,40 +3,36 @@ import React from 'react';
 class AppDrawer extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSwitch = this.handleSwitch.bind(this);
-    this.state = { menuBar: false };
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.state = { open: false };
   }
 
-  handleSwitch() {
-    (this.state.menuBar === false)
-      ? this.setState({ menuBar: true })
-      : this.setState({ menuBar: false });
+  handleOpen() {
+    this.setState({ open: true });
+  }
+
+  handleClose() {
+    this.setState({ open: false });
   }
 
   render() {
-    const x = this.state.menuBar === false;
-
     return (
       <div>
-        <i onClick={this.handleSwitch}
-           className={`menuicon ${x
-           ? 'fas fa-bars'
-           : 'hidden'}`}>
+        <i onClick={this.handleOpen}
+           className='fas fa-bars fa-2x'
+           id="drawer">
         </i>
-        <div onClick={this.handleSwitch}
-             className={x
-               ? 'hidden'
-               : 'background'}>
+        <div onClick={this.handleClose}
+             className={this.state.open ? 'view' : 'hidden'}>
         </div>
-        <div className={x
-          ? 'hidden'
-          : 'menu'}>
-          <h1>Menu</h1>
-          <ul>
-            <li onClick={this.handleSwitch}>A</li>
-            <li onClick={this.handleSwitch}>B</li>
-            <li onClick={this.handleSwitch}>C</li>
-          </ul>
+        <div className={this.state.open ? 'container' : 'container closed'}>
+          <div className="contents">
+            <h1 className="menuHeader">Menu</h1>
+            <button className="link" onClick={this.handleClose}>About</button>
+            <button className="link" onClick={this.handleClose}>Get Started</button>
+            <button className="link" onClick={this.handleClose}>Sign In</button>
+          </div>
         </div>
       </div>
     );
