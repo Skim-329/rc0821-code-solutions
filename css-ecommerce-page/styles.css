@@ -1,0 +1,67 @@
+body {
+  background-color: white;
+}
+
+.container {
+  margin: 5%;
+}
+
+.row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+}
+
+.row2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.column-fifth {
+  display: flex;
+  width: 20%;
+}
+
+img {
+  width: 85%;
+  margin: auto;
+}
+
+.row3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: 13px;
+  margin-bottom: -10px;
+}
+
+.brand {
+  font-family: 'DM Sans', sans-serif;
+  font-size: smaller;
+}
+
+span {
+  font-family: 'DM Sans', sans-serif;
+  color: lightgray;
+  font-size: smaller;
+}
+
+.row4 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: 13px;
+}
+
+.price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: smaller;
+  color: rgb(56, 11, 11);
+}
