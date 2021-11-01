@@ -1,11 +1,10 @@
 /* exported omit */
 function omit(source, keys) {
-  var object = {};
-  var propArrays = Object.keys(source);
+  const object = {};
 
-  for (var i = 0; i < propArrays.length; i++) {
-    if (!keys.includes(propArrays[i])) {
-      object[propArrays] = source[propArrays[i]];
+  for (var key in source) {
+    if (keys.indexOf(key) === -1) {
+      object[key] = source[key];
     }
   }
   return object;
