@@ -28,20 +28,20 @@ function uniqueQuadratic(words) {
     const word = words[i]; // 1 * 1 = O(1)
     let isUnique = true; // 1 * 1 = O(1)
     for (
-      let c = 0; // 1 * 1 = O(1)
-      c < i; // 2 * n = O(2n)
-      c++ // 2 * n = O(2n)
+      let c = 0; // 1 * n = O(n)
+      c < i; // 2 * n = O(2n^2)
+      c++ // 2 * n = O(2n^2)
     ) {
-      const comparing = words[c]; // 1 * 1 = O(1)
+      const comparing = words[c]; // 1 * n = O(n)
       if (comparing === word) {
-        // 2 * n = O(2n)
-        isUnique = false; // 1 * 1 = O(1)
+        // 2 * n = O(2n^2)
+        isUnique = false; // 1 * n = O(n)
       }
     }
     if (isUnique) {
-      // 1 * 1 = O(1)
+      // 1 * n = O(n)
       unique[unique.length] = word; // 2 * n = O(2n)
     }
   }
   return unique; // 1 * 1 = O(1)
-} // Big O Notation for uniqueQuadratic: O(n)
+} // Big O Notation for uniqueQuadratic: O(n^2)
